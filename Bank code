@@ -1,0 +1,29 @@
+public class BankAccount {
+    double balance;
+
+    BankAccount(double balance) {
+        this.balance = balance;
+    }
+
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid amount");
+        }
+    }
+
+    void withdraw(double amount) {
+        if (amount <= balance && amount > 0) {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        } else {
+            System.out.println("Not enough balance");
+        }
+    }
+
+    double getBalance() {
+        return balance;
+    }
+}
